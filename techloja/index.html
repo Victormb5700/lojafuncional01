@@ -3,49 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechLoja 2.0</title>
+
+    <title>LivrariaDoBairro</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 min-h-screen">
 
-<header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-        <h1 class="text-3xl font-bold text-blue-600">
-            TechLoja <span class="text-emerald-500">2.0</span>
+<body class="bg-stone-100 min-h-screen">
+
+<header class="shadow-lg bg-amber-900">
+
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+        <h1 class="text-4xl font-extrabold text-white">
+            📚 LivrariaDoBairro<span class="text-yellow-300"></span>
         </h1>
 
-        <button onclick="mostrarCarrinho()" class="flex items-center gap-2 text-xl">
+        <button onclick="mostrarCarrinho()" class="flex items-center gap-3 text-white text-xl">
+
             <i class="fa-solid fa-cart-shopping"></i>
+
             <span id="contador"
-                  class="bg-red-500 text-white text-xs rounded-full px-2 py-0.5">
+                  class="bg-red-600 text-white text-sm rounded-full px-2 py-1">
                 0
             </span>
+
         </button>
+
     </div>
+
 </header>
 
-<main class="max-w-6xl mx-auto px-6 py-8">
+<main class="max-w-7xl mx-auto px-6 py-10">
 
-    <input id="busca"
-           type="text"
-           placeholder="🔍 Buscar produtos..."
-           class="w-full p-4 border rounded-3xl mb-8 text-lg focus:outline-none focus:border-blue-500"
-           onkeyup="filtrarProdutos()">
+    <h2 class="text-3xl font-bold text-center text-amber-900 mb-3">
+        Encontre sua próxima leitura
+    </h2>
 
-    <div id="grid-produtos"
-         class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <p class="text-center text-gray-600 mb-10">
+        Livros, HQs e Mangás em um só lugar.
+    </p>
 
-        <!-- JS vai preencher -->
+    <input
+        id="busca"
+        type="text"
+        placeholder="🔎 Pesquise por título ou autor..."
+        class="w-full p-4 rounded-full border-2 border-amber-700 bg-white text-lg focus:outline-none focus:ring-2 focus:ring-amber-600"
+        onkeyup="filtrarProdutos()"
+    >
+
+    <div
+        id="grid-produtos"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+
+        <!-- Produtos -->
 
     </div>
 
 </main>
 
 <script src="script.js"></script>
+
 </body>
 </html>
